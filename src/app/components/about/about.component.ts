@@ -11,7 +11,7 @@ import { Avatar } from 'primeng/avatar';
 })
 export class AboutComponent {
   highlights = [
-    { icon: 'pi pi-code', label: '5+ Years', description: 'Development Experience' },
+    { icon: 'pi pi-code', label: '2+ Years', description: 'Development Experience' },
     { icon: 'pi pi-users', label: '50+', description: 'Projects Completed' },
     { icon: 'pi pi-star', label: '30+', description: 'Happy Clients' }
   ];
