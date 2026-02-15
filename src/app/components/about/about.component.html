@@ -1,0 +1,35 @@
+<section id="about" class="section-wrapper section-wrapper--alt">
+  <div class="section">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-content">
+      <div class="about-image">
+        <p-avatar
+          icon="pi pi-user"
+          size="xlarge"
+          [style]="{ 'background-color': 'var(--p-primary-100)', 'color': 'var(--p-primary-color)', 'width': '150px', 'height': '150px', 'font-size': '4rem' }" />
+      </div>
+      <div class="about-text">
+        <h3 class="about-heading">Frontend Developer with Backend Expertise</h3>
+        <p class="about-description">
+          I'm a passionate developer with over 5 years of experience building web applications.
+          I specialize in creating responsive, user-friendly interfaces using modern frameworks
+          like Angular and React, while also having strong backend skills in Node.js.
+        </p>
+        <p class="about-description">
+          My journey in web development started with a curiosity about how websites work,
+          and it has evolved into a career where I get to solve complex problems and create
+          meaningful digital experiences every day.
+        </p>
+        <div class="about-highlights">
+          @for (highlight of highlights; track highlight.label) {
+            <div class="highlight-item">
+              <i [class]="highlight.icon"></i>
+              <span class="highlight-value">{{ highlight.label }}</span>
+              <span class="highlight-label">{{ highlight.description }}</span>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

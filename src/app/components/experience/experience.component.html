@@ -1,0 +1,24 @@
+<section id="experience" class="section-wrapper section-wrapper--alt">
+  <div class="section">
+    <h2 class="section-title">Experience</h2>
+    <p class="section-subtitle">My professional journey</p>
+
+    <div class="timeline-container">
+      <p-timeline [value]="experiences" layout="vertical" align="alternate">
+        <ng-template #marker let-experience>
+          <span class="timeline-marker">
+            <i [class]="experience.icon"></i>
+          </span>
+        </ng-template>
+        <ng-template #content let-experience>
+          <div class="experience-card">
+            <span class="experience-period">{{ experience.period }}</span>
+            <h3 class="experience-title">{{ experience.title }}</h3>
+            <h4 class="experience-company">{{ experience.company }}</h4>
+            <p class="experience-description">{{ experience.description }}</p>
+          </div>
+        </ng-template>
+      </p-timeline>
+    </div>
+  </div>
+</section>

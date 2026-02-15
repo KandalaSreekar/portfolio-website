@@ -1,0 +1,99 @@
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .about-content {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+}
+
+.about-image {
+  flex-shrink: 0;
+}
+
+.about-text {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .about-text {
+    text-align: left;
+  }
+}
+
+.about-heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--p-text-color);
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .about-heading {
+    font-size: 1.5rem;
+  }
+}
+
+.about-description {
+  color: var(--p-text-muted-color);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.about-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .about-highlights {
+    justify-content: flex-start;
+  }
+}
+
+.highlight-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background: var(--p-surface-0);
+  border-radius: 0.5rem;
+  min-width: 120px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+:host-context(.app-dark) .highlight-item {
+  background: var(--p-surface-800);
+}
+
+.highlight-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-item i {
+  font-size: 1.5rem;
+  color: var(--p-primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.highlight-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--p-text-color);
+}
+
+.highlight-label {
+  font-size: 0.875rem;
+  color: var(--p-text-muted-color);
+  text-align: center;
+}

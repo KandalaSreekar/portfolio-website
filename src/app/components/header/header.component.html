@@ -1,0 +1,20 @@
+<header class="header">
+  <p-menubar [model]="items" styleClass="header-menubar">
+    <ng-template #start>
+      <span class="logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-text">SK</span>
+        <span class="logo-bracket">/&gt;</span>
+      </span>
+    </ng-template>
+    <ng-template #end>
+      <p-button
+        [icon]="themeService.isDarkMode() ? 'pi pi-sun' : 'pi pi-moon'"
+        [rounded]="true"
+        [text]="true"
+        (onClick)="toggleDarkMode()"
+        ariaLabel="Toggle dark mode"
+        severity="secondary" />
+    </ng-template>
+  </p-menubar>
+</header>

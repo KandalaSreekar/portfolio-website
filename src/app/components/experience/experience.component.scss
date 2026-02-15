@@ -1,0 +1,86 @@
+.timeline-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.timeline-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: var(--p-primary-color);
+  color: var(--p-primary-contrast-color);
+}
+
+.timeline-marker i {
+  font-size: 1rem;
+}
+
+.experience-card {
+  background: var(--p-surface-0);
+  border: 1px solid var(--p-surface-200);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+:host-context(.app-dark) .experience-card {
+  background: var(--p-surface-800);
+  border-color: var(--p-surface-700);
+}
+
+.experience-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.experience-period {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--p-primary-color);
+  background: var(--p-primary-100);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+:host-context(.app-dark) .experience-period {
+  background: var(--p-primary-900);
+}
+
+.experience-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--p-text-color);
+  margin: 0 0 0.25rem 0;
+}
+
+.experience-company {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--p-primary-color);
+  margin: 0 0 0.75rem 0;
+}
+
+.experience-description {
+  font-size: 0.875rem;
+  color: var(--p-text-muted-color);
+  line-height: 1.6;
+  margin: 0;
+}
+
+// Responsive adjustments for mobile
+@media (max-width: 767px) {
+  ::ng-deep .p-timeline {
+    .p-timeline-event-opposite {
+      display: none;
+    }
+
+    .p-timeline-event-content {
+      text-align: left !important;
+    }
+  }
+}

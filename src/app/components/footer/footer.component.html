@@ -1,0 +1,43 @@
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-brand">
+      <span class="logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-text">SK</span>
+        <span class="logo-bracket">/&gt;</span>
+      </span>
+      <p class="footer-tagline">Building digital experiences with passion and precision.</p>
+    </div>
+
+    <nav class="footer-nav">
+      <h4>Navigation</h4>
+      <ul>
+        @for (link of navLinks; track link.label) {
+          <li>
+            <a (click)="scrollTo(link.sectionId)" (keydown.enter)="scrollTo(link.sectionId)" tabindex="0">
+              {{ link.label }}
+            </a>
+          </li>
+        }
+      </ul>
+    </nav>
+
+    <div class="footer-social">
+      <h4>Connect</h4>
+      <div class="social-links">
+        @for (social of socialLinks; track social.label) {
+          <a [href]="social.url" target="_blank" rel="noopener noreferrer" [attr.aria-label]="social.label">
+            <i [class]="social.icon"></i>
+          </a>
+        }
+      </div>
+    </div>
+  </div>
+
+  <p-divider />
+
+  <div class="footer-bottom">
+    <p>&copy; {{ currentYear }} Sreekar Kandala. All rights reserved.</p>
+    <p>Crafted with <i class="pi pi-heart" style="color: var(--p-red-500)"></i> using Angular & PrimeNG</p>
+  </div>
+</footer>

@@ -1,0 +1,55 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--p-surface-0);
+  border-bottom: 1px solid var(--p-surface-200);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+:host-context(.app-dark) .header {
+  background: var(--p-surface-900);
+  border-bottom-color: var(--p-surface-700);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: 'Courier New', monospace;
+  display: flex;
+  align-items: center;
+  gap: 0.125rem;
+}
+
+.logo-bracket {
+  color: var(--p-primary-color);
+}
+
+.logo-text {
+  color: var(--p-text-color);
+}
+
+::ng-deep .header-menubar {
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  padding: 0.75rem 1rem;
+}
+
+@media (min-width: 768px) {
+  ::ng-deep .header-menubar {
+    padding: 0.75rem 2rem;
+  }
+}
+
+::ng-deep .header-menubar .p-menubar-root-list {
+  gap: 0.25rem;
+}
+
+@media (min-width: 992px) {
+  ::ng-deep .header-menubar .p-menubar-root-list {
+    gap: 0.5rem;
+  }
+}
